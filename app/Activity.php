@@ -9,6 +9,7 @@ class Activity extends Model
     // table name
    protected $table = 'activities';
    
+
    /**
      * The attributes that are mass assignable.
      *
@@ -20,6 +21,7 @@ class Activity extends Model
     	'act_beg_date',
     	'act_end_date',
     ];
+    
     
     /**
      * The attributes excluded from the model's JSON form.
