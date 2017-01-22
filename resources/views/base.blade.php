@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   | @yield('content')
+                 @yield('content')
                 </div>
 
                 <div class="links">
