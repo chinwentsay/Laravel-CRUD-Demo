@@ -17,5 +17,10 @@ Route::get('/', function () {
 
  Route::get('/news'   , ['as' => 'activityController.index'     , 'uses' => 'activityController@index']);
 
-Route::get('/acts/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
+  Route::group(['prefix' => 'acts'] , function() {
+
+	Route::get('/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
+
+  });
+//Route::get('/acts/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
 
