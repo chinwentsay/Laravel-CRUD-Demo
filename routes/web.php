@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+ Route::get('/news'   , ['as' => 'activityController.index'     , 'uses' => 'activityController@index']);
+
+
