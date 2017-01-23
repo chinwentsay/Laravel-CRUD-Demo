@@ -19,19 +19,19 @@ Route::get('/', function () {
 
   Route::group(['prefix' => 'acts'] , function() {
 
-  	Route::get('/'   , ['as' => 'activityController.index'     , 'uses' => 'activityController@index']);
+  	  Route::get('/'   , ['as' => 'activityController.index'     , 'uses' => 'activityController@index']);
 
-	Route::get('/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
+	     Route::get('/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
 
-    Route::get('/delete/{id}'   , ['as' => 'activityController.destroy'     , 'uses' => 'activityController@destroy']);
+      Route::get('/delete/{id}'   , ['as' => 'activityController.destroy'     , 'uses' => 'activityController@destroy']);
 
-     Route::post('/edit/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
+       Route::post('/edit/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
 
-     Route::post('/update/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
+       Route::post('/update/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
 
-	Route::get('/create'   , ['as' => 'activityController.create'     , 'uses' => 'activityController@create']);
+	     Route::get('/create'   , ['as' => 'activityController.create'     , 'uses' => 'activityController@create']);
 
-     Route::post('/store'   , ['as' => 'activityController.store'     , 'uses' => 'activityController@store']);
+      Route::post('/store'   , ['as' => 'activityController.store'     , 'uses' => 'activityController@store']);
 
   });
 //Route::get('/acts/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
