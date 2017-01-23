@@ -5,7 +5,7 @@
 </head>
 <body>
    <h1>{{ $title }}</h1>
-   {{Form::open(['url'=>'post', 'method'=>'post'])}}
+   {{Form::open(['url'=>'acts.store', 'method'=>'post'])}}
    {{Form::label('title', '活動編號')}}<br>
    {{Form::text('act_no')}}<br>
    {{Form::label('content', '活動主旨')}}<br>
