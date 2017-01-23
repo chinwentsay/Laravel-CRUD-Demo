@@ -23,11 +23,11 @@ Route::get('/', function () {
 
 	Route::get('/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
 
-    Route::delete('/delete/{id}'   , ['as' => 'activityController.destroy'     , 'uses' => 'activityController@destroy']);
+    Route::get('/delete/{id}'   , ['as' => 'activityController.destroy'     , 'uses' => 'activityController@destroy']);
 
      Route::post('/edit/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
 
-     Route::post('/updateedit/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
+     Route::post('/update/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
 
 	Route::get('/create'   , ['as' => 'activityController.create'     , 'uses' => 'activityController@create']);
 
