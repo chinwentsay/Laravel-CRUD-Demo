@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Activity;
 use DB;
 use Session;
@@ -44,6 +45,15 @@ class activityController extends Controller
     public function store(Request $request)
     {
         //
+  
+        Activity::create ([
+            'act_no' => $request->get('act_no'),
+            'act_name' => $request->get('act_name')
+            ]);
+
+
+        return redirect()->route('activityController.index');
+
     }
 
     /**
