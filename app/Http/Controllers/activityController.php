@@ -32,6 +32,7 @@ class activityController extends Controller
     public function create()
     {
         //
+        return view('menu.acts.create')->with('title', '新增');
     }
 
     /**
