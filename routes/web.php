@@ -19,6 +19,8 @@ Route::get('/', function () {
 
   Route::group(['prefix' => 'acts'] , function() {
 
+  	Route::get('/'   , ['as' => 'activityController.index'     , 'uses' => 'activityController@index']);
+
 	Route::get('/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
 
     Route::delete('/delete/{id}'   , ['as' => 'activityController.destroy'     , 'uses' => 'activityController@destroy']);
