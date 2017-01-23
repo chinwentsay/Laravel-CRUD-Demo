@@ -21,7 +21,7 @@ Route::get('/', function () {
 
   	  Route::get('/'   , ['as' => 'activityController.index'     , 'uses' => 'activityController@index']);
 
-	     Route::get('/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
+	     Route::get('/show/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
 
       Route::get('/delete/{id}'   , ['as' => 'activityController.destroy'     , 'uses' => 'activityController@destroy']);
 
