@@ -53,7 +53,12 @@ class activityController extends Controller
      */
     public function show($id)
     {
-        //
+        $sql = 'select * from activities where id='.$id;
+        $acts = DB::select($sql);
+        $data = compact('acts');
+       // dd($Activities[0]);
+    
+       return view('menu.activities')->with('data', $acts);
     }
 
     /**
