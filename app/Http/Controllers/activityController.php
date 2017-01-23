@@ -56,9 +56,11 @@ class activityController extends Controller
         $sql = 'select * from activities where id='.$id;
         $acts = DB::select($sql);
         $data = compact('acts');
+        $title = '活動列表';
        // dd($Activities[0]);
     
-       return view('menu.activities')->with('data', $acts);
+    // return View::make('menu.activities')->with('title',$title)->with('data',$data);
+     return view('menu.activities')->with('data', $acts);
     }
 
     /**
@@ -90,8 +92,16 @@ class activityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy( $id)
     {
         //
+         // dd($id);
+
+       $post = Activity::find($id);
+
+       $post->delete();
+        
+
+        return redirect()->route('activityController.index')->with('message', '刪除成功!!');
     }
 }
