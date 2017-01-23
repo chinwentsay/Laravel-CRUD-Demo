@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Activity;
+use DB;
+use Session;
 
 class activityController extends Controller
 {
@@ -14,9 +17,11 @@ class activityController extends Controller
     public function index()
     {
         //
-        $Activities = Activity::orderBy('created_at','desc');
-        $data = compact('posts');
-        return view('activities.index', $data);
+        $acts = DB::select('select * from activities');
+        $data = compact('acts');
+       // dd($Activities[0]);
+    
+       return view('menu.activities')->with('data', $acts);
     }
 
     /**
