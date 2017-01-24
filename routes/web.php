@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+Route::group(['middleware' =>'auth'],function(){
+
  Route::get('/news'   , ['as' => 'activityController.index'     , 'uses' => 'activityController@index']);
 
   Route::group(['prefix' => 'acts'] , function() {
@@ -34,9 +37,11 @@ Route::get('/', function () {
       Route::post('/store'   , ['as' => 'activityController.store'     , 'uses' => 'activityController@store']);
 
   });
+
+});
 //Route::get('/acts/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
 
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');
