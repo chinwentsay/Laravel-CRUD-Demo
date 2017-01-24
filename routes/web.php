@@ -36,3 +36,7 @@ Route::get('/', function () {
   });
 //Route::get('/acts/{id}'   , ['as' => 'activityController.show'     , 'uses' => 'activityController@show']);
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
