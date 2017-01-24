@@ -83,6 +83,10 @@ class activityController extends Controller
     public function edit($id)
     {
         //
+        $title = '編輯';
+        $act =  Activity::find($id);
+         //dd($act->act_no);
+        return view('menu.acts.edit')->with('act', $act)->with('title', '編輯');
     }
 
     /**
@@ -95,6 +99,14 @@ class activityController extends Controller
     public function update(Request $request, $id)
     {
         //
+         $act =  Activity::find($id);
+         $act->update ([
+                'act_no' => $request->get('act_no'),
+                'act_name' => $request->get('act_name')
+            ]);
+
+           return redirect()->route('activityController.index');
+
     }
 
     /**

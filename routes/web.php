@@ -25,9 +25,9 @@ Route::get('/', function () {
 
       Route::get('/delete/{id}'   , ['as' => 'activityController.destroy'     , 'uses' => 'activityController@destroy']);
 
-       Route::post('/edit/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
+       Route::get('/edit/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
 
-       Route::post('/update/{id}'   , ['as' => 'activityController.edit'     , 'uses' => 'activityController@edit']);
+       Route::post('/update/{id}'   , ['as' => 'activityController.update'     , 'uses' => 'activityController@update']);
 
 	     Route::get('/create'   , ['as' => 'activityController.create'     , 'uses' => 'activityController@create']);
 
